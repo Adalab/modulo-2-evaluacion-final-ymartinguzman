@@ -40,10 +40,13 @@ function paintSeries() {
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
+  let idClickList = event.currentTarget.id;
+  console.log(idClickList);
   // favouritesList.push(clickList);
-  console.log(favouritesList);
-  if (favouritesList.indexOf(clickList) === -1) {
-    favouritesList.push(clickList);
+  for (let i = 0; i < favouritesList.length; i++) {
+    if (favouritesList[i].indexOf(idClickList) === -1) {
+      listSeries.push(idClickList);
+    }
   }
 }
 
