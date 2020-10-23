@@ -7,6 +7,7 @@ const result = document.querySelector('.js-result');
 //data.score.image
 
 let listSeries = [];
+
 function getInfo() {
   let inputValue = input.value;
   console.log(inputValue);
@@ -20,13 +21,19 @@ function getInfo() {
 }
 
 function paintSeries() {
+  let resultsHtml = '';
   for (const list of listSeries) {
-    result.innerHTML += `<li>`;
-    result.innerHTML += `<img src = ${list.show.image.medium}
+    resultsHtml += `<li>`;
+    resultsHtml += `<h2> ${list.show.name} </h2>`;
+    if (list.show.image === null) {
+      resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
+    } else {
+      resultsHtml += `<img src = ${list.show.image.medium}
         alt = picture serie shown >`;
-    result.innerHTML += `<h2> ${list.show.name} </h2>`;
-    result.innerHTML += `</li>`;
+    }
+    resultsHtml += `</li>`;
   }
+  result.innerHTML = resultsHtml;
 }
 
 btn.addEventListener('click', getInfo);
