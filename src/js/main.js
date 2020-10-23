@@ -10,7 +10,6 @@ let listSeries = [];
 
 function getInfo() {
   let inputValue = input.value;
-  console.log(inputValue);
   fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
@@ -18,12 +17,13 @@ function getInfo() {
     });
 
   paintSeries();
+  listenList();
 }
 
 function paintSeries() {
   let resultsHtml = '';
   for (const list of listSeries) {
-    resultsHtml += `<li>`;
+    resultsHtml += `<li class="js-list-item">`;
     resultsHtml += `<h2> ${list.show.name} </h2>`;
     if (list.show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
@@ -34,6 +34,15 @@ function paintSeries() {
     resultsHtml += `</li>`;
   }
   result.innerHTML = resultsHtml;
+}
+
+function favouritesSeries() {}
+
+function listenList() {
+  const listItems = document.querySelectorAll('.js-list-item');
+  for (const listItem of listItems) {
+    listItem.addEventListener('click', favouritesSeries);
+  }
 }
 
 btn.addEventListener('click', getInfo);
