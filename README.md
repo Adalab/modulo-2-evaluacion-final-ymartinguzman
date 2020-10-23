@@ -3,11 +3,10 @@ Buscador de series
 -[]Lista de series
 --[]Fetch para obtener datos
 --[]Parsear datos del servidor
--[]pintar la lista en html
--[]sustituir por imagen "no disponible"
+-[]pintar la lista en html -[x]sustituir por imagen "no disponible"
 -[]Favoritos
---[]Escuchar al evento click de cada serie
---[]Identificar el elemento clicado
+--[x]Escuchar al evento click de cada serie
+--[x]Identificar el elemento clicado
 --[]guardar favoritos en array
 --[]Lista de favoritos a la izquierda
 --[]selccionar favorita y añadir a una lista (añadir la clase)

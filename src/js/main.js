@@ -7,6 +7,7 @@ const result = document.querySelector('.js-result');
 //data.score.image
 
 let listSeries = [];
+let favouritesList = [];
 
 function getInfo() {
   let inputValue = input.value;
@@ -37,9 +38,13 @@ function paintSeries() {
 }
 
 function favouritesSeries(event) {
-  console.log('escuchar evento');
   const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
+  // favouritesList.push(clickList);
+  console.log(favouritesList);
+  if (favouritesList.indexOf(clickList) === -1) {
+    favouritesList.push(clickList);
+  }
 }
 
 function listenList() {
