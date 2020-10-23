@@ -13,15 +13,23 @@ function getInfo() {
   fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
-      for (const list of data) {
-        console.log(list);
-        result.innerHTML += `<li>`;
-        result.innerHTML += `<img src = ${list.show.image}
-        alt = picture serie shown >`;
-        result.innerHTML += `<h2> ${list.show.name} </h2>`;
-        result.innerHTML += `</li>`;
-      }
+      listSeries = data;
     });
+
+  paintSeries();
+}
+
+function paintSeries() {
+  for (const list of listSeries) {
+    result.innerHTML += `<li>`;
+    result.innerHTML += `<img src = ${list.show.image.medium}
+        alt = picture serie shown >`;
+    result.innerHTML += `<h2> ${list.show.name} </h2>`;
+    result.innerHTML += `</li>`;
+  }
 }
 
 btn.addEventListener('click', getInfo);
+
+//quitar esta línea
+btn.click();

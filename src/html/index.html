@@ -9,10 +9,16 @@
     <main>
       <h1>Buscador de series</h1>
       <form method="GET">
-        <label for="">
-          <input type="text" class="js-input" value="friends" />
+        <label for="text">
+          <input
+            type="text"
+            id="text"
+            class="js-input"
+            value="friends"
+            placeholder="¿Qué serie quieres ver?"
+          />
           <!--acuérdate de quitar este value-->
-          <input type="button" class="js-btn" value="Search" />
+          <input type="button" id="button" class="js-btn" value="Search" />
         </label>
       </form>
       <ul class="js-result"></ul>
