@@ -10,7 +10,7 @@ let listSeries = [];
 
 function getInfo() {
   let inputValue = input.value;
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
+  fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
       listSeries = data;
@@ -22,13 +22,13 @@ function getInfo() {
 
 function paintSeries() {
   let resultsHtml = '';
-  for (const list of listSeries) {
-    resultsHtml += `<li class="js-list-item">`;
-    resultsHtml += `<h2> ${list.show.name} </h2>`;
-    if (list.show.image === null) {
+  for (let i = 0; i < listSeries.length; i++) {
+    resultsHtml += `<li id${i} class="js-list-item">`;
+    resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
+    if (listSeries[i].show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
     } else {
-      resultsHtml += `<img src = ${list.show.image.medium}
+      resultsHtml += `<img src = ${listSeries[i].show.image.medium}
         alt = picture serie shown >`;
     }
     resultsHtml += `</li>`;
@@ -36,7 +36,11 @@ function paintSeries() {
   result.innerHTML = resultsHtml;
 }
 
-function favouritesSeries() {}
+function favouritesSeries(event) {
+  console.log('escuchar evento');
+  const clickList = event.currentTarget;
+  console.log(clickList);
+}
 
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
