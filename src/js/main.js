@@ -23,7 +23,7 @@ function getInfo() {
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
-    resultsHtml += `<li id${i} class="js-list-item">`;
+    resultsHtml += `<li  class="js-list-item" id="${i}">`;
     resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
@@ -38,7 +38,7 @@ function paintSeries() {
 
 function favouritesSeries(event) {
   console.log('escuchar evento');
-  const clickList = event.currentTarget;
+  const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
 }
 
