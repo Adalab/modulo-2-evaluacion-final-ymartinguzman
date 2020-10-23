@@ -24,7 +24,7 @@ function getInfo() {
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
-    resultsHtml += `<li  class="js-list-item" id="${i}">`;
+    resultsHtml += `<li  class="js-list-item js-list-color" id="${i}">`;
     resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
