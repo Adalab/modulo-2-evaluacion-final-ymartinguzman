@@ -40,16 +40,15 @@ function paintSeries() {
 function favouritesSeries(event) {
   // debugger;
   const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
-  console.log(clickList);
-  // favouritesList.push(clickList);
-
+  // console.log(clickList);
   const clickFavourite = favouritesList.indexOf(clickList);
   console.log(clickFavourite);
 
   if (favouritesList.indexOf(listSeries[clickList]) === -1) {
     favouritesList.push(clickList);
-  } else {
-  }
+  // } else {
+  //   console.log('quítalo');
+  // }
 }
 
 function listenList() {
