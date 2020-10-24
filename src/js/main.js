@@ -38,15 +38,17 @@ function paintSeries() {
 }
 
 function favouritesSeries(event) {
-  const clickList = parseInt(event.currentTarget.id);
+  // debugger;
+  const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
   console.log(clickList);
-  let idClickList = event.currentTarget.id;
-  console.log(idClickList);
   // favouritesList.push(clickList);
-  for (let i = 0; i < favouritesList.length; i++) {
-    if (favouritesList[i].indexOf(idClickList) === -1) {
-      listSeries.push(idClickList);
-    }
+
+  const clickFavourite = favouritesList.indexOf(clickList);
+  console.log(clickFavourite);
+
+  if (favouritesList.indexOf(listSeries[clickList]) === -1) {
+    favouritesList.push(clickList);
+  } else {
   }
 }
 
