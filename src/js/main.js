@@ -22,6 +22,7 @@ function getInfo() {
   paintSeries();
   listenList();
   paintFavList();
+  setLocalStorage();
 }
 
 function paintSeries() {
@@ -57,8 +58,7 @@ function favouritesSeries(event) {
     console.log('lo quito');
     //   favouritesList.splice(clickFavourite, 1);
   }
-  // // console.log(favouritesList.splice(clickFavourite, 1));
-  console.log(clickList);
+  localStorage.setItem('objeto', JSON.stringify(favouritesList));
   paintSeries();
   listenList();
   paintFavList();
@@ -87,9 +87,9 @@ function paintFavList() {
   console.log(favouritesList);
   favList.innerHTML = resultsFav;
 }
-function setLocalStorage() {
-  localStorage.setItem('object', JSON.stringify(favouritesList));
-}
+// function setLocalStorage() {
+//   localStorage.setItem('object', JSON.stringify(favouritesList));
+// }
 
 // listenList();
 btn.addEventListener('click', getInfo);
