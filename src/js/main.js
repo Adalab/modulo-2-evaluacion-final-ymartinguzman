@@ -24,7 +24,7 @@ function getInfo() {
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
-    resultsHtml += `<li  class="js-list-item js-list-color" id="${i}">`;
+    resultsHtml += `<li  class="js-list-item " id="${i}">`;
     resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
@@ -38,18 +38,38 @@ function paintSeries() {
 }
 
 function favouritesSeries(event) {
-  // debugger;
   const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
   // console.log(clickList);
   const clickFavourite = favouritesList.indexOf(clickList);
   console.log(clickFavourite);
 
-  if (favouritesList.indexOf(listSeries[clickList]) === -1) {
+  if (clickFavourite === -1) {
     favouritesList.push(clickList);
-  // } else {
-  //   console.log('quítalo');
-  // }
+    console.log('lo meto');
+    // favouritesList.classList.add('js-list-favourite');
+  } else {
+    favouritesList.splice(clickFavourite, 1);
+    console.log('lo quito');
+    //   favouritesList.splice(clickFavourite, 1);
+  }
+  // // console.log(favouritesList.splice(clickFavourite, 1));
+
+  paintSeries();
+  listenList();
 }
+
+// let resultsFav = '';
+// for (let i = 0; i < favouritesList.length; i++) {
+//   resultsFav += `<li  class="js-result-fav js-list-color" id="${i}">`;
+//   resultsFav += `<h2> ${favouritesList[i]} </h2>`;
+//   if (favouritesList[i] === null) {
+//     resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
+//   } else {
+//     resultsFav += `<img src = ${favouritesList[i]}
+//       alt = picture serie shown >`;
+//   }
+//   resultsFav += `</li>`;
+// }
 
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
