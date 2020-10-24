@@ -18,7 +18,6 @@ function getInfo() {
     .then((data) => {
       listSeries = data;
     });
-    
 
   paintSeries();
   listenList();
@@ -44,13 +43,13 @@ function paintSeries() {
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
   console.log(clickList);
-  let miCoñoSerranoSacaEsteExamen = listSeries[clickList];
+  let listSeriesClick = listSeries[clickList];
 
   const clickFavourite = favouritesList.indexOf(clickList);
   console.log(clickFavourite);
 
   if (clickFavourite === -1) {
-    favouritesList.push(miCoñoSerranoSacaEsteExamen);
+    favouritesList.push(listSeriesClick);
     console.log('lo meto');
     // favouritesList.classList.add('js-list-favourite');
   } else {
@@ -63,6 +62,7 @@ function favouritesSeries(event) {
   paintSeries();
   listenList();
   paintFavList();
+  setLocalStorage();
 }
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
@@ -87,8 +87,8 @@ function paintFavList() {
   console.log(favouritesList);
   favList.innerHTML = resultsFav;
 }
-const setLocalStorage(){
-
+function setLocalStorage() {
+  localStorage.setItem('object', JSON.stringify(favouritesList));
 }
 
 // listenList();
