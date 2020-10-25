@@ -7,7 +7,7 @@
     <title>Buscador de series</title>
   </head>
   <body>
-    <main>
+    <main class="main">
       <h1>Buscador de series</h1>
       <form method="GET">
         <label for="text">
@@ -23,12 +23,17 @@
           <input type="button" id="button" class="js-btn" value="Search" />
         </label>
       </form>
-      <div>
-        <p class="fav-shows">My favourites shows</p>
-        <ul class="js-result-fav"></ul>
+      <div class="container">
+        <section>
+          <p class="fav-shows">My favourites shows</p>
+          <ul class="js-result-fav"></ul>
+        </section>
+        <section>
+          <ul class="js-result"></ul>
+        </section>
       </div>
-      <ul class="js-result"></ul>
     </main>
+    <footer class="footer">Coded with ❤️ by Yamira Martín</footer>
     <script src="./assets/js/main.js"></script>
   </body>
 </html>

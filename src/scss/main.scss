@@ -1,6 +1,26 @@
+* {
+  list-style: none;
+}
+.main {
+  min-height: 100vh;
+}
+.container {
+  display: flex;
+}
 .js-list-color {
   background-color: turquoise;
 }
 .js-list--random {
   background-color: violet;
+}
+.footer {
+  background-color: darkcyan;
+  font-family: sans-serif;
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }

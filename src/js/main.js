@@ -31,10 +31,10 @@ function paintSeries() {
     resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
     resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
-      resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
+      resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." `;
     } else {
       resultsHtml += `<img src = ${listSeries[i].show.image.medium}
-        alt = picture serie shown >`;
+        alt = picture serie shown  >`;
     }
     resultsHtml += `</li>`;
   }
@@ -48,7 +48,12 @@ function favouritesSeries(event) {
 
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
+    console.log('lo pongo');
   }
+  // else {
+  //   // favouritesList.splice(listSeriesClick, 1);
+  //   console.log('lo quito');
+  // }
   //  else {
   //   favouritesList.splice(listSeries, 1);
   //   console.log('lo quito');
@@ -57,8 +62,17 @@ function favouritesSeries(event) {
   paintSeries();
   listenList();
   paintFavList();
+  // deleteFav();
   setLocalStorage();
 }
+
+// function deleteFav() {
+//   const deleteItemsBtn = document.querySelector('.btn-delete');
+//   for (const deleteItem of deleteItemsBtn) {
+//     deleteButton.addEventListener('click', favouritesSeries);
+//   }
+// }
+
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
   for (const listItem of listItems) {
@@ -72,14 +86,15 @@ function paintFavList() {
     resultsFav += `<li  class="js-result-fav js-list--random" id="${i}">`;
     resultsFav += `<h3> ${favouritesList[i].show.name} </h3>`;
     if (favouritesList[i].show.image === null) {
-      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
+      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." width="100"`;
     } else {
       resultsFav += `<img src = ${favouritesList[i].show.image.medium}
       alt = picture serie shown  width="100">`;
     }
+    resultsFav += `<button class="btn-delete">X</button>`;
     resultsFav += `</li>`;
   }
-  console.log(favouritesList);
+
   favList.innerHTML = resultsFav;
 }
 function getFromLocalStorage() {
