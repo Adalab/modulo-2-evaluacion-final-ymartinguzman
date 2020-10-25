@@ -28,8 +28,8 @@ function getInfo() {
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
-    resultsHtml += `<li  class="js-list-item " id="${i}">`;
-    resultsHtml += `<h2> ${listSeries[i].show.name} </h2>`;
+    resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
+    resultsHtml += `<h2 class="js-title-film"> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
       resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." `;
     } else {
@@ -86,7 +86,7 @@ function listenList() {
 function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
-    resultsFav += `<li  class="js-result-fav js-list-color" id="${i}">`;
+    resultsFav += `<li  class="js-result-fav js-fav-color" id="${i}">`;
     resultsFav += `<h3> ${favouritesList[i].show.name} </h3>`;
     if (favouritesList[i].show.image === null) {
       resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." width="100"`;

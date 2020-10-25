@@ -7,8 +7,8 @@
     <title>Buscador de series</title>
   </head>
   <body>
+    <h1 class="main-title">Buscador de series</h1>
     <main class="main">
-      <h1>Buscador de series</h1>
       <form method="GET">
         <label for="text">
           <input
@@ -20,17 +20,16 @@
             required
           />
           <!--acuérdate de quitar este value-->
-          <input type="button" id="button" class="js-btn" value="Search" />
+          <input type="button" id="button" class="btn js-btn" value="Buscar" />
         </label>
       </form>
       <div class="container">
         <section>
-          <p class="fav-shows">My favourites shows</p>
+          <p class="fav-shows">Mis series favoritas</p>
           <ul class="js-result-fav"></ul>
         </section>
         <section>
-          <h2>Results</h2>
-          <ul class="js-result"></ul>
+          <ul class="container-series js-result"></ul>
         </section>
       </div>
     </main>
