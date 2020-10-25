@@ -50,9 +50,10 @@ function favouritesSeries(event) {
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
     console.log('lo pongo');
-  } else if (clickFavourite !== -1 && clickFavourite === clickList) {
-    console.log('no lo añade mas');
   }
+  //  else if (clickFavourite !== -1 && clickFavourite === clickList) {
+  //   console.log('no lo añade mas');
+  // }
   // else {
   //   // favouritesList.splice(listSeriesClick, 1);
   //   console.log('lo quito');

@@ -1,5 +1,8 @@
 * {
   list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 // .body {
 //   background-image: url('../images/pop-corn.jpeg');
@@ -10,28 +13,45 @@
   text-align: center;
 }
 .main {
-  min-height: 100vh;
-}
-.container-series {
-  display: flex;
-  flex-direction: row;
-}
-
-.btn {
-  background-color: #14274e;
-  color: #f1f6f9;
+  min-height: 80vh;
 }
 .container {
   display: flex;
 }
+//series results
+.container-series {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
 .js-list-color {
   background-color: #008891;
+  text-align: center;
+  padding: 20px;
 }
 .js-title-film {
   color: #e7e7de;
 }
+//input area
+.btn {
+  background-color: #14274e;
+  color: #f1f6f9;
+}
+//favourites
+.fav-shows {
+  font-size: 25px;
+  color: #14274e;
+  font-weight: bold;
+}
+.container-fav {
+  width: 300px;
+}
+
+//footer
 .footer {
-  background-color: darkcyan;
+  color: #008891;
   font-family: sans-serif;
   font-size: 12px;
   font-weight: normal;
