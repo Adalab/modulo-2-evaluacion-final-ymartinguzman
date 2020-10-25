@@ -117,8 +117,5 @@ function setLocalStorage() {
 // listenList();
 btn.addEventListener('click', getInfo);
 
-//quitar esta línea
-btn.click();
-
 getFromLocalStorage();
 getInfo();
