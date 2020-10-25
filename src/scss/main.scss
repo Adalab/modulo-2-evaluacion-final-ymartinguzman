@@ -12,6 +12,7 @@
   font-size: 50px;
   text-align: center;
 }
+
 .main {
   min-height: 80vh;
 }
@@ -30,6 +31,7 @@
   background-color: #008891;
   text-align: center;
   padding: 20px;
+  border-radius: 10px;
 }
 .js-title-film {
   color: #e7e7de;
@@ -38,12 +40,23 @@
 .btn {
   background-color: #14274e;
   color: #f1f6f9;
+  width: 70px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.input {
+  border-style: none;
+  border-bottom: 1px solid black;
+}
+.form {
+  padding-bottom: 20px;
 }
 //favourites
 .fav-shows {
   font-size: 25px;
   color: #14274e;
   font-weight: bold;
+  padding-bottom: 20px;
 }
 .container-fav {
   width: 300px;
