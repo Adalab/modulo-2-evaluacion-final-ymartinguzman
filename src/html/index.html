@@ -16,22 +16,27 @@
           <input
             type="text"
             id="text"
-            class="input js-input"
+            class="form__input js-input"
             value="friends"
             placeholder="¿Qué serie quieres ver?"
             required
           />
           <!--acuérdate de quitar este value-->
-          <input type="button" id="button" class="btn js-btn" value="Buscar" />
+          <input
+            type="button"
+            id="button"
+            class="form__btn js-btn"
+            value="Buscar"
+          />
         </label>
       </form>
       <div class="container">
-        <section class="container-fav">
-          <p class="fav-shows">Mis series favoritas</p>
-          <ul class="js-result-fav"></ul>
+        <section class="container__section-fav">
+          <p class="container__section-fav--shows">Mis series favoritas</p>
+          <ul class="container__section-fav--list js-result-fav"></ul>
         </section>
-        <section>
-          <ul class="container-series js-result"></ul>
+        <section class="container__section-series">
+          <ul class="container__section-series--list js-result"></ul>
         </section>
       </div>
     </main>

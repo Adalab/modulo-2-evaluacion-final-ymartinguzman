@@ -1,9 +1,6 @@
-Buscador de series
--[] Campo de búsqueda
--[]Lista de series
---[]Fetch para obtener datos
---[]Parsear datos del servidor
--[]pintar la lista en html -[x]sustituir por imagen "no disponible"
+Buscador de series -[x] Campo de búsqueda -[x]Lista de series
+--[x]Fetch para obtener datos
+--[x]Parsear datos del servidor -[x]pintar la lista en html -[x]sustituir por imagen "no disponible"
 -[]Favoritos
 --[x]Escuchar al evento click de cada serie
 --[x]Identificar el elemento clicado

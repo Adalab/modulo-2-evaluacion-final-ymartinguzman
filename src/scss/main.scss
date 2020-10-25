@@ -4,24 +4,43 @@
   margin: 0;
   padding: 0;
 }
-// .body {
-//   background-image: url('../images/pop-corn.jpeg');
-//   background-size: cover;
-// }
+
 .main-title {
   font-size: 50px;
   text-align: center;
+  padding: 30px;
 }
 
 .main {
   min-height: 80vh;
 }
+
+//input area
+.form {
+  padding-bottom: 20px;
+}
+.form__input {
+  border-style: none;
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+.form__btn {
+  background-color: #14274e;
+  color: #f1f6f9;
+  width: 70px;
+  padding: 10px;
+  border-radius: 20px;
+}
+//main container
 .container {
   display: flex;
-  justify-content: center;
 }
 //series results
-.container-series {
+.container__section-series {
+  justify-content: center;
+  width: 70%;
+}
+.container__section-series--list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -37,30 +56,22 @@
 .js-title-film {
   color: #e7e7de;
 }
-//input area
-.btn {
-  background-color: #14274e;
-  color: #f1f6f9;
-  width: 70px;
-  padding: 10px;
-  border-radius: 20px;
-}
-.input {
-  border-style: none;
-  border-bottom: 1px solid black;
-}
-.form {
-  padding-bottom: 20px;
-}
+
 //favourites
-.fav-shows {
+.container__section-fav {
+  width: 300px;
+}
+.container__section-fav--shows {
   font-size: 25px;
   color: #14274e;
   font-weight: bold;
   padding-bottom: 20px;
 }
-.container-fav {
-  width: 300px;
+
+.js-list-fav {
+  padding-bottom: 25px;
+  width: 150px;
+  text-align: center;
 }
 
 //footer
