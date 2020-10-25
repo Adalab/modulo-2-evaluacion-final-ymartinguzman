@@ -42,7 +42,7 @@ function paintSeries() {
 }
 
 function favouritesSeries(event) {
-  const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
+  const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
   let listSeriesClick = listSeries[clickList];
   const clickFavourite = favouritesList.indexOf(clickList);
