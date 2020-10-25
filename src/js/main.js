@@ -90,7 +90,7 @@ function paintFavList() {
     resultsFav += `<li  class="js-result-fav js-list-fav " id="${i}">`;
     resultsFav += `<h3> ${favouritesList[i].show.name} </h3>`;
     if (favouritesList[i].show.image === null) {
-      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = cover selected seriewidth="100"`;
+      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = cover selected serie width="100"`;
     } else {
       resultsFav += `<img src = ${favouritesList[i].show.image.medium}
       alt = picture serie shown  alt = cover selected serie width="100">`;
