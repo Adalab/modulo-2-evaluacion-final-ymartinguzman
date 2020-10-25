@@ -41,6 +41,7 @@ function paintSeries() {
   result.innerHTML = resultsHtml;
 }
 
+//funcion Handler
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
   console.log(clickList);
@@ -77,6 +78,7 @@ function favouritesSeries(event) {
 //   }
 // }
 
+//Escuchar eventos de cada elemento del array
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
   for (const listItem of listItems) {
@@ -84,6 +86,7 @@ function listenList() {
   }
 }
 
+//pintar lista de favoritos
 function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
