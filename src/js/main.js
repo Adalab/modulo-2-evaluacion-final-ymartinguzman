@@ -70,7 +70,7 @@ function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
     resultsFav += `<li  class="js-result-fav js-list--random" id="${i}">`;
-    resultsFav += `<h2> ${favouritesList[i].show.name} </h2>`;
+    resultsFav += `<h3> ${favouritesList[i].show.name} </h3>`;
     if (favouritesList[i].show.image === null) {
       resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV."`;
     } else {
