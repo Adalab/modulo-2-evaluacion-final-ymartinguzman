@@ -22,7 +22,7 @@ function getInfo() {
   paintSeries();
   listenList();
   paintFavList();
-  setLocalStorage();
+  // setLocalStorage(); llamar o no¿?cambia algo?
 }
 
 function paintSeries() {
@@ -43,22 +43,17 @@ function paintSeries() {
 
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
-  console.log(clickList);
   let listSeriesClick = listSeries[clickList];
-
   const clickFavourite = favouritesList.indexOf(clickList);
-  console.log(clickFavourite);
 
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
-    console.log('lo meto');
-    // favouritesList.classList.add('js-list-favourite');
-  } else {
-    favouritesList.splice(listSeries, 1);
-    console.log('lo quito');
-    //   favouritesList.splice(clickFavourite, 1);
   }
-  localStorage.setItem('objeto', JSON.stringify(favouritesList));
+  //  else {
+  //   favouritesList.splice(listSeries, 1);
+  //   console.log('lo quito');
+  //   favouritesList.splice(clickFavourite, 1);
+
   paintSeries();
   listenList();
   paintFavList();
@@ -87,12 +82,24 @@ function paintFavList() {
   console.log(favouritesList);
   favList.innerHTML = resultsFav;
 }
-// function setLocalStorage() {
-//   localStorage.setItem('object', JSON.stringify(favouritesList));
-// }
+function getFromLocalStorage() {
+  const getItemLocal = localStorage.getItem('objeto');
+  if (getItemLocal !== null) {
+    favouritesList = JSON.parse(getItemLocal);
+  }
+}
+
+function setLocalStorage() {
+  const stringifyFav = JSON.stringify(favouritesList);
+  localStorage.setItem('objeto', stringifyFav);
+  paintFavList();
+}
 
 // listenList();
 btn.addEventListener('click', getInfo);
 
 //quitar esta línea
 btn.click();
+
+getFromLocalStorage();
+getInfo();
