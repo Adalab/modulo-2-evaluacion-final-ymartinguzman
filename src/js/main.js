@@ -43,7 +43,7 @@ function paintSeries() {
 
 //funcion Handler
 function favouritesSeries(event) {
-  const clickList = parseInt(event.currentTarget.id); //friends o la serie clicada
+  const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
   let listSeriesClick = listSeries[clickList];
   const clickFavourite = favouritesList.indexOf(clickList);
@@ -119,9 +119,6 @@ function setLocalStorage() {
 
 // listenList();
 btn.addEventListener('click', getInfo);
-
-//quitar esta línea
-btn.click();
 
 getFromLocalStorage();
 getInfo();
