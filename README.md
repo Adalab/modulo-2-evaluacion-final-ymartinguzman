@@ -1,6 +1,6 @@
-Este proyecto forma parte de la Evaluación del Módulo 2 de Adalab Digital.
+Este proyecto forma parte de la # Evaluación del Módulo 2 de Adalab Digital.
 
-# ¿En qué consiste este proyecto?
+## ¿En qué consiste este proyecto?
 
 El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, que nos permite
 marcar y desmarcar las series como favoritas y guardarlas en local storage.
@@ -17,7 +17,7 @@ Para ello, al hacer clic sobre una serie debe pasar lo siguiente:
 1. Se puede observar un listado en la parte izquierda de la pantalla, debajo del formulario de búsqueda, con las series favoritas.
 1. Las series favoritas siguen apareciendo a la izquierda aunque la usuaria realice otra búsqueda, puesto que los datos se guardan en localStorage.
 
-# ¿Cómo se arranca este proyecto?
+## ¿Cómo se arranca este proyecto?
 
 Forma parte del https://github.com/Adalab/Adalab-web-starter-kit donde necesitamos desarrollar los siguientes comandos:
 1. Npm install para instalar todas las dependencias y ficheros
