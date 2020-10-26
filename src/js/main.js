@@ -19,12 +19,12 @@ function getInfo() {
   paintSeries();
   listenList();
   paintFavList();
-  // setLocalStorage(); llamar o no¿?c?
 }
 
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
+    const listId = listSeries[i].show.id;
     const listName = listSeries[i].show.name;
     const listImage = listSeries[i].show.image;
     resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
@@ -43,25 +43,21 @@ function paintSeries() {
 //function Handler
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id);
-  console.log(clickList);
   let listSeriesClick = listSeries[clickList];
-  const clickFavourite = favouritesList.indexOf(clickList);
+  const pathClick = listSeriesClick.show.id;
+  const idFavorites = favouritesList.map(function (fa) {
+    return fa.show.id;
+  }); //Para array de obj. Hago nuevo array. para acceder al objeto acceder a la posicion del id, hago un array nuevo. Entro al objeto para poder acceder al id.
+
+  const clickFavourite = idFavorites.indexOf(pathClick); // indexOf solo sirve para cadena de caracteres o numer
 
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
     console.log('lo pongo');
+  } else {
+    favouritesList.splice(clickFavourite, 1); //parametro 1 posicion, parametro 2, cantidad
+    console.log('lo quito');
   }
-  //  else if (clickFavourite !== -1 && clickFavourite === clickList) {
-  //   console.log('no lo añade mas');
-  // }
-  // else {
-  //   // favouritesList.splice(listSeriesClick, 1);
-  //   console.log('lo quito');
-  // }
-  //  else {
-  //   favouritesList.splice(listSeries, 1);
-  //   console.log('lo quito');
-  //   favouritesList.splice(clickFavourite, 1);
 
   paintSeries();
   listenList();
