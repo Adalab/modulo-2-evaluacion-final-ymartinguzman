@@ -20,6 +20,7 @@ function getInfo() {
   paintSeries();
   listenList();
   paintFavList();
+  deleteFav();
 }
 
 function paintSeries() {
@@ -61,7 +62,7 @@ function favouritesSeries(event) {
   paintSeries();
   listenList();
   paintFavList();
-  deleteFav();
+  // deleteFav();
   setLocalStorage();
 }
 
