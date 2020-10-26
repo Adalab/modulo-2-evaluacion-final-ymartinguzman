@@ -4,14 +4,11 @@ const input = document.querySelector('.js-input');
 const btn = document.querySelector('.js-btn');
 const result = document.querySelector('.js-result');
 const favList = document.querySelector('.js-result-fav');
-//data.show.name
-//data.score.image
 
 let listSeries = [];
 let favouritesList = [];
 
 function getInfo() {
-  //obtener info de la api, tarda!
   let inputValue = input.value;
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
@@ -31,7 +28,7 @@ function paintSeries() {
     resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
     resultsHtml += `<h2 class="js-title-film"> ${listSeries[i].show.name} </h2>`;
     if (listSeries[i].show.image === null) {
-      resultsHtml += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = cover selected serie `;
+      resultsHtml += `<img src = "https://fabulousfurs.com/ItemImages/Large/IMAGE_NOT_AVAILABLE_535x764_4.jpg" width="200" alt = cover selected serie `;
     } else {
       resultsHtml += `<img src = ${listSeries[i].show.image.medium}
         alt = cover selected serie >`;
@@ -78,7 +75,7 @@ function favouritesSeries(event) {
 //   }
 // }
 
-//Escuchar eventos de cada elemento del array
+//Listen to each element of the array
 function listenList() {
   const listItems = document.querySelectorAll('.js-list-item');
   for (const listItem of listItems) {
@@ -86,7 +83,6 @@ function listenList() {
   }
 }
 
-//pintar lista de favoritos
 function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
@@ -117,7 +113,6 @@ function setLocalStorage() {
   paintFavList();
 }
 
-// listenList();
 btn.addEventListener('click', getInfo);
 
 getFromLocalStorage();
