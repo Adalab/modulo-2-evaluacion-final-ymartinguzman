@@ -19,26 +19,28 @@ function getInfo() {
   paintSeries();
   listenList();
   paintFavList();
-  // setLocalStorage(); llamar o no¿?cambia algo?
+  // setLocalStorage(); llamar o no¿?c?
 }
 
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
+    const listName = listSeries[i].show.name;
+    const listImage = listSeries[i].show.image;
     resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
-    resultsHtml += `<h2 class="js-title-film"> ${listSeries[i].show.name} </h2>`;
-    if (listSeries[i].show.image === null) {
-      resultsHtml += `<img src = "https://fabulousfurs.com/ItemImages/Large/IMAGE_NOT_AVAILABLE_535x764_4.jpg" width="200" alt = cover selected serie `;
+    resultsHtml += `<h2 class="js-title-film"> ${listName} </h2>`;
+    if (listImage === null) {
+      resultsHtml += `<img src = "https://fabulousfurs.com/ItemImages/Large/IMAGE_NOT_AVAILABLE_535x764_4.jpg" width="200" alt = "cover selected serie" `;
     } else {
-      resultsHtml += `<img src = ${listSeries[i].show.image.medium}
-        alt = cover selected serie >`;
+      resultsHtml += `<img src = ${listImage.medium}
+        alt = "cover selected serie" >`;
     }
     resultsHtml += `</li>`;
   }
   result.innerHTML = resultsHtml;
 }
 
-//funcion Handler
+//function Handler
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id);
   console.log(clickList);
@@ -86,13 +88,14 @@ function listenList() {
 function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
+    const listName = favouritesList[i].show.name;
+    const listImage = favouritesList[i].show.image;
     resultsFav += `<li  class="js-result-fav js-list-fav " id="${i}">`;
-    resultsFav += `<h3> ${favouritesList[i].show.name} </h3>`;
-    if (favouritesList[i].show.image === null) {
-      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = cover selected serie width="100"`;
+    resultsFav += `<h3> ${listName} </h3>`;
+    if (listImage === null) {
+      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = "cover selected serie" width="100"`;
     } else {
-      resultsFav += `<img src = ${favouritesList[i].show.image.medium}
-      alt = picture serie shown  alt = cover selected serie width="100">`;
+      resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
     resultsFav += `<button class="btn-delete">X</button>`;
     resultsFav += `</li>`;
