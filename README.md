@@ -1,4 +1,4 @@
-Este proyecto forma parte de la # Evaluación del Módulo 2 de Adalab Digital.
+# Evaluación del Módulo 2 de Adalab Digital.
 
 ## ¿En qué consiste este proyecto?
 
