@@ -4,6 +4,7 @@ const input = document.querySelector('.js-input');
 const btn = document.querySelector('.js-btn');
 const result = document.querySelector('.js-result');
 const favList = document.querySelector('.js-result-fav');
+const deleteItemsBtn = document.querySelector('.btn-delete');
 
 let listSeries = [];
 let favouritesList = [];
@@ -47,31 +48,32 @@ function favouritesSeries(event) {
   const pathClick = listSeriesClick.show.id;
   const idFavorites = favouritesList.map(function (fa) {
     return fa.show.id;
-  }); //Para array de obj. Hago nuevo array. para acceder al objeto acceder a la posicion del id, hago un array nuevo. Entro al objeto para poder acceder al id.
+  }); //En arrays de obPara array de obj. Hago nuevo array. para acceder al objeto acceder a la posicion del id, hago un array nuevo. Entro al objeto para poder acceder al id.
 
   const clickFavourite = idFavorites.indexOf(pathClick); // indexOf solo sirve para cadena de caracteres o numer
 
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
-    console.log('lo pongo');
   } else {
     favouritesList.splice(clickFavourite, 1); //parametro 1 posicion, parametro 2, cantidad
-    console.log('lo quito');
   }
 
   paintSeries();
   listenList();
   paintFavList();
-  // deleteFav();
+  deleteFav();
   setLocalStorage();
 }
 
-// function deleteFav() {
-//   const deleteItemsBtn = document.querySelector('.btn-delete');
-//   for (const deleteItem of deleteItemsBtn) {
-//     deleteButton.addEventListener('click', favouritesSeries);
-//   }
-// }
+//Delete favourites
+function deleteFav() {
+  console.log('Hola');
+  favouritesList = [];
+  favList.innerHTML = '';
+  localStorage.clear();
+}
+
+deleteItemsBtn.addEventListener('click', deleteFav);
 
 //Listen to each element of the array
 function listenList() {
@@ -93,7 +95,6 @@ function paintFavList() {
     } else {
       resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
-    resultsFav += `<button class="btn-delete">X</button>`;
     resultsFav += `</li>`;
   }
 
