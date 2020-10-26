@@ -9,6 +9,7 @@ const deleteItemsBtn = document.querySelector('.btn-delete');
 let listSeries = [];
 let favouritesList = [];
 
+//Call API and get info back
 function getInfo() {
   let inputValue = input.value;
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
@@ -23,6 +24,7 @@ function getInfo() {
   deleteFav();
 }
 
+//Paint in HTML the result of the searching
 function paintSeries() {
   let resultsHtml = '';
   for (let i = 0; i < listSeries.length; i++) {
@@ -42,33 +44,30 @@ function paintSeries() {
   result.innerHTML = resultsHtml;
 }
 
-//function Handler
+//Handler
 function favouritesSeries(event) {
   const clickList = parseInt(event.currentTarget.id);
   let listSeriesClick = listSeries[clickList];
   const pathClick = listSeriesClick.show.id;
   const idFavorites = favouritesList.map(function (fa) {
     return fa.show.id;
-  }); //En arrays de obPara array de obj. Hago nuevo array. para acceder al objeto acceder a la posicion del id, hago un array nuevo. Entro al objeto para poder acceder al id.
+  }); //To take info from an array with objects, needs to be done accesing into the id position with a new array
 
-  const clickFavourite = idFavorites.indexOf(pathClick); // indexOf solo sirve para cadena de caracteres o numer
-
+  const clickFavourite = idFavorites.indexOf(pathClick);
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
   } else {
-    favouritesList.splice(clickFavourite, 1); //parametro 1 posicion, parametro 2, cantidad
+    favouritesList.splice(clickFavourite, 1);
   }
 
   paintSeries();
   listenList();
   paintFavList();
-  // deleteFav();
   setLocalStorage();
 }
 
 //Delete favourites
 function deleteFav() {
-  console.log('Hola');
   favouritesList = [];
   favList.innerHTML = '';
   localStorage.clear();
@@ -84,6 +83,7 @@ function listenList() {
   }
 }
 
+//Paint in HTML in a list, the favourites selected
 function paintFavList() {
   let resultsFav = '';
   for (let i = 0; i < favouritesList.length; i++) {
@@ -101,6 +101,7 @@ function paintFavList() {
 
   favList.innerHTML = resultsFav;
 }
+//Recuperate info from localStorage when refresh
 function getFromLocalStorage() {
   const getItemLocal = localStorage.getItem('objeto');
   if (getItemLocal !== null) {
@@ -108,13 +109,20 @@ function getFromLocalStorage() {
   }
 }
 
+//Set in localStorage favourites
 function setLocalStorage() {
   const stringifyFav = JSON.stringify(favouritesList);
   localStorage.setItem('objeto', stringifyFav);
   paintFavList();
 }
 
+//Listener
 btn.addEventListener('click', getInfo);
+
+//use enter also as an event
+// document.addEventListener("keydown", function (event){
+
+// })
 
 getFromLocalStorage();
 getInfo();
