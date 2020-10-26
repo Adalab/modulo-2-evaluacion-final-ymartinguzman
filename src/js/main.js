@@ -118,7 +118,7 @@ function setLocalStorage() {
 //Listener
 btn.addEventListener('click', getInfo);
 
-//use enter also as an event
+//Use enter also as an event
 input.addEventListener('keydown', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
