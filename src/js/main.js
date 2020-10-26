@@ -16,12 +16,11 @@ function getInfo() {
     .then((response) => response.json())
     .then((data) => {
       listSeries = data;
+      paintSeries();
+      listenList();
+      paintFavList();
+      deleteFav();
     });
-
-  paintSeries();
-  listenList();
-  paintFavList();
-  deleteFav();
 }
 
 //Paint in HTML the result of the searching
@@ -120,9 +119,12 @@ function setLocalStorage() {
 btn.addEventListener('click', getInfo);
 
 //use enter also as an event
-// document.addEventListener("keydown", function (event){
-
-// })
+input.addEventListener('keydown', function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    getInfo();
+  }
+});
 
 getFromLocalStorage();
 getInfo();
