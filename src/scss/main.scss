@@ -30,7 +30,7 @@ body {
 }
 .form__btn {
   background-color: #14274e;
-  color: #f1f6f9;
+  color: #e7e7de;
   width: 70px;
   padding: 10px;
   border-radius: 20px;
@@ -77,6 +77,14 @@ body {
   padding-bottom: 25px;
   width: 150px;
   text-align: center;
+}
+
+.btn-delete {
+  height: 40px;
+  width: 130px;
+  border-radius: 20px;
+  background-color: #14274e;
+  color: #e7e7de;
 }
 
 //footer
