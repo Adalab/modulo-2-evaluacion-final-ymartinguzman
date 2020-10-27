@@ -5,6 +5,7 @@ const btn = document.querySelector('.js-btn');
 const result = document.querySelector('.js-result');
 const favList = document.querySelector('.js-result-fav');
 const deleteItemsBtn = document.querySelector('.btn-delete');
+const btnLog = document.querySelector('.js-btn-log');
 
 let listSeries = [];
 let favouritesList = [];
@@ -30,6 +31,7 @@ function paintSeries() {
     const listId = listSeries[i].show.id;
     const listName = listSeries[i].show.name;
     const listImage = listSeries[i].show.image;
+    const schedule = listSeries[i].show.schedule.time;
     resultsHtml += `<li  class="js-list-item js-list-color " id="${i}">`;
     resultsHtml += `<h2 class="js-title-film"> ${listName} </h2>`;
     if (listImage === null) {
@@ -38,6 +40,7 @@ function paintSeries() {
       resultsHtml += `<img src = ${listImage.medium}
         alt = "cover selected serie" >`;
     }
+    resultsHtml += `<p >${schedule}</p>`;
     resultsHtml += `</li>`;
   }
   result.innerHTML = resultsHtml;
@@ -117,6 +120,14 @@ function setLocalStorage() {
 
 //Listener
 btn.addEventListener('click', getInfo);
+
+//Listener LOG
+function resultName() {
+  for (const listSerie of listSeries) {
+    console.log(listSerie.show.name);
+  }
+}
+btnLog.addEventListener('click', resultName);
 
 //Use enter also as an event
 input.addEventListener('keydown', function (event) {
