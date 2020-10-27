@@ -45,12 +45,20 @@ function paintSeries() {
 
 //Handler
 function favouritesSeries(event) {
+  debugger;
+  event.currentTarget.classList.toggle('js-change');
   const clickList = parseInt(event.currentTarget.id);
   let listSeriesClick = listSeries[clickList];
   const pathClick = listSeriesClick.show.id;
   const idFavorites = favouritesList.map(function (fa) {
     return fa.show.id;
   }); //To take info from an array with objects, needs to be done accesing into the id position with a new array
+
+  /////// otra forma de hacerlo
+  // const idFavorites = []
+  // for (let item of favouritesList) {
+  //   idFavorites.push(item.show.id);
+  // }
 
   const clickFavourite = idFavorites.indexOf(pathClick);
   if (clickFavourite === -1) {
@@ -59,7 +67,7 @@ function favouritesSeries(event) {
     favouritesList.splice(clickFavourite, 1);
   }
 
-  paintSeries();
+  // paintSeries();
   listenList();
   paintFavList();
   setLocalStorage();
