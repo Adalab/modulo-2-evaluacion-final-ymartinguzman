@@ -91,10 +91,11 @@ function paintFavList() {
     resultsFav += `<li  class="js-result-fav js-list-fav " id="${i}">`;
     resultsFav += `<h3> ${listName} </h3>`;
     if (listImage === null) {
-      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = "cover selected serie" width="100"`;
+      resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = "cover selected serie" width="100">`;
     } else {
       resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
+    resultsFav += `<button class="btn-single">x</button>`;
     resultsFav += `</li>`;
   }
 
