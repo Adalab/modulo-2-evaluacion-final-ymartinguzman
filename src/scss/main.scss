@@ -104,7 +104,7 @@ body {
 }
 
 .js-list-color {
-  background-color: #008891;
+  background-color: #1aa99c;
   text-align: center;
   padding: 20px;
   border-radius: 10px;
@@ -124,6 +124,12 @@ body {
   font-weight: bold;
   padding-bottom: 20px;
   text-align: center;
+  @media all and (min-width: 768px) {
+    font-size: 35px;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 45px;
+  }
 }
 
 .js-list-fav {
