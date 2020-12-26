@@ -11,25 +11,17 @@ body {
 
 .main-title {
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
   padding: 30px;
   text-transform: uppercase;
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @media all and (min-width: 768px) {
-    font-size: 100px;
-    // width: 150px;
-    // height: 70px;
-    // text-align: center;
-    // margin-top: 40%;
+    font-size: 120px;
   }
   @media all and (min-width: 1200px) {
     font-size: 200px;
-    // width: 225px;
-    // height: 90px;
-    // text-align: center;
-    // margin-top: 23%;
   }
 }
 
@@ -42,17 +34,37 @@ body {
   padding-bottom: 20px;
   text-align: center;
 }
+
 .form__input {
   border-style: none;
-  padding: 10px;
+  padding: 0.6em;
+  border: 0.2em solid rgb(26, 188, 156);
+  @media all and (min-width: 768px) {
+    width: 180px;
+    height: 50px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 220px;
+    height: 60px;
+  }
 }
+
 .form__btn {
-  background-color: #14274e;
-  color: #e7e7de;
+  color: #14274e;
   width: 70px;
-  padding: 10px;
-  border-radius: 20px;
   outline: none;
+  margin-left: -5px;
+  padding: 0.6em;
+  border: 0.2em solid rgb(26, 188, 156);
+  background: rgb(26, 188, 156);
+  @media all and (min-width: 768px) {
+    width: 90px;
+    height: 50px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 100px;
+    height: 60px;
+  }
 }
 //main container
 .container {
