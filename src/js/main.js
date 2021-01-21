@@ -12,7 +12,7 @@ let favouritesList = [];
 //Call API and get info back
 function getInfo() {
   let inputValue = input.value;
-  fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
+  fetch(`https://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
     .then((data) => {
       listSeries = data;
