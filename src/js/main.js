@@ -101,6 +101,7 @@ function paintFavList() {
 
   favList.innerHTML = resultsFav;
 }
+
 //Recuperate info from localStorage when refresh
 function getFromLocalStorage() {
   const getItemLocal = localStorage.getItem('objeto');
