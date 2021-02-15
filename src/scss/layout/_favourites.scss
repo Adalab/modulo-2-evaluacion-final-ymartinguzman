@@ -1,0 +1,36 @@
+.container__section-fav {
+  padding: 20px;
+}
+.container__section-fav--shows {
+  font-size: 25px;
+  color: $darkBlue;
+  font-weight: bold;
+  padding-bottom: 20px;
+  text-align: center;
+  @media all and (min-width: 768px) {
+    font-size: 35px;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 45px;
+  }
+}
+
+.js-list-fav {
+  padding-bottom: 25px;
+  width: 150px;
+  text-align: center;
+}
+.btn-single {
+  position: relative;
+  right: 37%;
+  bottom: -18px;
+}
+
+.btn-delete {
+  height: 40px;
+  width: 130px;
+  border-radius: 20px;
+  background-color: $darkBlue;
+  color: #e7e7de;
+  outline: none;
+}

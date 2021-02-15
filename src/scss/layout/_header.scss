@@ -1,0 +1,16 @@
+.header-title {
+  text-align: center;
+  font-size: 80px;
+  padding: 30px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media all and (min-width: 768px) {
+    font-size: 120px;
+  }
+  @media all and (min-width: 1200px) {
+    font-size: 200px;
+  }
+}
