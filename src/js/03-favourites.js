@@ -21,14 +21,17 @@ function favouritesSeries(event) {
   setLocalStorage();
 }
 
-//Delete favourites
-function deleteFav() {
+//Delete all favourites series
+function deleteAllFav() {
   favouritesList = [];
   favList.innerHTML = '';
   localStorage.clear();
 }
 
-deleteItemsBtn.addEventListener('click', deleteFav);
+// //Delete one favourite serie
+// function deleteFav(){
+//   if(favouritesList)
+// }
 
 //Listen to each element of the array
 function listenList() {
@@ -51,7 +54,7 @@ function paintFavList() {
     } else {
       resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
-    resultsFav += `<button class="btn-single">x</button>`;
+    resultsFav += `<button class="btn-single-delete">x</button>`;
     resultsFav += `</li>`;
   }
 

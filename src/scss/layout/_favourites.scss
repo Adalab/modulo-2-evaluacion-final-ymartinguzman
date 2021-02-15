@@ -15,6 +15,13 @@
   }
 }
 
+.container__section-fav--list {
+  display: flex;
+  flex-direction: row;
+  @media all and (min-width: 768px) {
+    flex-direction: column;
+  }
+}
 .js-list-fav {
   padding-bottom: 25px;
   width: 150px;
@@ -26,7 +33,7 @@
   bottom: -18px;
 }
 
-.btn-delete {
+.container__section--btn-delete {
   height: 40px;
   width: 130px;
   border-radius: 20px;

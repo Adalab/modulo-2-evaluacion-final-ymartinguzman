@@ -1,15 +1,17 @@
 .container {
   display: flex;
-  //flex-direction: column;
+  flex-direction: column;
+  margin: 20px;
   @media all and (min-width: 768px) {
+    flex-direction: row;
   }
   @media all and (min-width: 1200px) {
   }
 }
 //series results
 .container__section-series {
+  display: flex;
   justify-content: center;
-  margin-right: 30px;
 }
 .container__section-series--list {
   display: grid;

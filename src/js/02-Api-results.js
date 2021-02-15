@@ -8,7 +8,7 @@ function getInfo() {
       paintSeries();
       listenList();
       paintFavList();
-      deleteFav();
+      deleteAllFav();
     });
 }
 
