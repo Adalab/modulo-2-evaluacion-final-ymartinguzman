@@ -5,6 +5,7 @@ const btn = document.querySelector('.js-btn');
 const result = document.querySelector('.js-result');
 const favList = document.querySelector('.js-result-fav');
 const deleteItemsBtn = document.querySelector('.btn-delete');
+const containerFav = document.querySelector('.js-container');
 
 let listSeries = [];
 let favouritesList = [];
@@ -26,6 +27,7 @@ function getInfo() {
 //Paint in HTML the result of the searching
 function paintSeries() {
   let resultsHtml = '';
+
   for (let i = 0; i < listSeries.length; i++) {
     const listId = listSeries[i].show.id;
     const listName = listSeries[i].show.name;
@@ -40,6 +42,7 @@ function paintSeries() {
     }
     resultsHtml += `</li>`;
   }
+
   result.innerHTML = resultsHtml;
 }
 
@@ -55,6 +58,7 @@ function favouritesSeries(event) {
   const clickFavourite = idFavorites.indexOf(pathClick);
   if (clickFavourite === -1) {
     favouritesList.push(listSeriesClick);
+    containerFav.classList.remove('js-hidden');
   } else {
     favouritesList.splice(clickFavourite, 1);
   }
