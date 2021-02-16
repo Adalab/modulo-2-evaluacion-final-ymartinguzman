@@ -1,17 +1,17 @@
 .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 20px;
   @media all and (min-width: 768px) {
     flex-direction: row;
+    justify-content: center;
   }
   @media all and (min-width: 1200px) {
   }
 }
 //series results
 .container__section-series {
-  display: flex;
-  justify-content: center;
 }
 .container__section-series--list {
   display: grid;
@@ -33,6 +33,7 @@
   text-align: center;
   padding: 20px;
   border-radius: 10px;
+  width: 250px;
 }
 .js-title-film {
   color: $white;

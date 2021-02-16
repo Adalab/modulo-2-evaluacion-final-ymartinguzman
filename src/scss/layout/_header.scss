@@ -1,6 +1,7 @@
 .header-title {
-  text-align: center;
-  font-size: 80px;
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
   padding: 30px;
   text-transform: uppercase;
   background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
