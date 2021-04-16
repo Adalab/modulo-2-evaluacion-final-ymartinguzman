@@ -1,17 +1,14 @@
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   margin: 20px;
-  @media all and (min-width: 768px) {
-    flex-direction: row;
-    justify-content: center;
-  }
-  @media all and (min-width: 1200px) {
-  }
 }
 //series results
 .container__section-series {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .container__section-series--list {
   display: grid;
@@ -21,10 +18,12 @@
   @media all and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    column-gap: 45px;
   }
   @media all and (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
+    column-gap: 45px;
   }
 }
 

@@ -29,8 +29,8 @@ function deleteAllFav() {
 }
 
 // //Delete one favourite serie
-// function deleteFav(){
-//   if(favouritesList)
+// function deleteFav() {
+
 // }
 
 //Listen to each element of the array

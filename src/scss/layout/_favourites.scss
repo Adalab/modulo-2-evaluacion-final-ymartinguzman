@@ -1,12 +1,6 @@
 .container__section-fav {
   padding: 20px;
-  @media all and (min-width: 768px) {
-    position: relative;
-    top: -550px;
-  }
-  @media all and (min-width: 1200px) {
-    top: -150px;
-  }
+  width: 20%;
 }
 .container__section-fav--shows {
   font-size: 25px;
