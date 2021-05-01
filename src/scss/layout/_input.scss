@@ -12,16 +12,16 @@
   border-style: none;
   padding: 0.6em;
   border: 0.2em solid $turquoise;
-  box-shadow: 1px 1px 0 $turquoise, 2px 2px 0 $turquoise, 3px 3px 0 $turquoise,
-    4px 4px 0 $turquoise, 5px 5px 0 $turquoise, 6px 6px 0 $turquoise,
-    7px 7px 0 $turquoise;
+  outline: none;
+  border-radius: 20px 0 0 20px;
   @media all and (min-width: 768px) {
     width: 180px;
     height: 50px;
   }
   @media all and (min-width: 1200px) {
-    width: 220px;
+    width: 260px;
     height: 60px;
+    font-size: 18px;
   }
 }
 
@@ -31,11 +31,10 @@
   outline: none;
   margin-left: -5px;
   padding: 0.6em;
-  border: 0.2em solid $darkTurquoise;
-  background: $darkTurquoise;
-  box-shadow: 1px 1px 0 $turquoise, 2px 2px 0 $turquoise, 3px 3px 0 $turquoise,
-    4px 4px 0 $turquoise, 5px 5px 0 $turquoise, 6px 6px 0 $turquoise,
-    7px 7px 0 $turquoise;
+  border: 0.2em solid $gloomyTurquoise;
+  background: $gloomyTurquoise;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
   @media all and (min-width: 768px) {
     width: 90px;
     height: 50px;
@@ -43,5 +42,10 @@
   @media all and (min-width: 1200px) {
     width: 100px;
     height: 60px;
+    font-size: 18px;
+  }
+  &:hover {
+    background-color: #1abc9c;
+    color: black;
   }
 }

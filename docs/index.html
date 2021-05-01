@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Blumeflix</title>
   </head>
   <body>
-    <header>
-      <h1 class="main-title">Blumeflix</h1>
+    <header class="header">
+      <h1 class="header-title">Petflix</h1>
+      <h2 class="header-subtitle">
+        Series y películas para disfrutar con tu mascota
+      </h2>
     </header>
     <main class="main">
-      <form method="GET" class="form">
+      <form method="GET" class="main__form">
         <label for="text">
           <input
             type="text"
@@ -34,10 +39,12 @@
         </label>
       </form>
       <div class="container">
-        <section class="container__section-fav">
-          <p class="container__section-fav--shows">Favoritos</p>
+        <section class="container__section-fav js-hidden js-container">
+          <h3 class="container__section-fav--shows">Favoritos</h3>
           <ul class="container__section-fav--list js-result-fav"></ul>
-          <button class="btn-delete">Borrar favoritos</button>
+          <button class="container__section--btn-delete">
+            Borrar favoritos
+          </button>
         </section>
         <section class="container__section-series">
           <ul class="container__section-series--list js-result"></ul>

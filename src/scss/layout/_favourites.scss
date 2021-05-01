@@ -1,12 +1,23 @@
 .container__section-fav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+  width: 20%;
 }
 .container__section-fav--shows {
   font-size: 25px;
-  color: $darkBlue;
+  color: $gloomyTurquoise;
   font-weight: bold;
   padding-bottom: 20px;
   text-align: center;
+  position: relative;
+  top: 8px;
+  background: linear-gradient(to right, #1abc9c 20%, #7a4cb3 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
   @media all and (min-width: 768px) {
     font-size: 35px;
   }
@@ -18,8 +29,10 @@
 .container__section-fav--list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   @media all and (min-width: 768px) {
     flex-direction: column;
+    align-items: center;
   }
 }
 .js-list-fav {
@@ -37,7 +50,15 @@
   height: 40px;
   width: 130px;
   border-radius: 20px;
-  background-color: $darkBlue;
-  color: #e7e7de;
+  background-color: $gloomyTurquoise;
+  color: white;
   outline: none;
+  border-style: hidden;
+  &:hover {
+    background-color: #1abc9c;
+    color: black;
+    cursor: pointer;
+  }
+  @media all and (min-width: 768px) {
+  }
 }

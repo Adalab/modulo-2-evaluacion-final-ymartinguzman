@@ -54,7 +54,7 @@ function paintFavList() {
     } else {
       resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
-    resultsFav += `<button class="btn-single-delete">x</button>`;
+    // resultsFav += `<button class="btn-single-delete">x</button>`;
     resultsFav += `</li>`;
   }
 
