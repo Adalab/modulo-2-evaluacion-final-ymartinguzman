@@ -15,7 +15,7 @@
 .container__section-series {
   display: flex;
   justify-content: center;
-  width: 80%;
+  width: 100%;
   margin: -20px 20px;
 }
 .container__section-series--list {
@@ -51,7 +51,7 @@
 .js-list-item {
   &:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 24px white;
+    box-shadow: 0 0 45px purple;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
   }
@@ -64,7 +64,4 @@
 .js-list-image {
   width: 200px;
   height: 295px;
-}
-.js-hidden {
-  display: none;
 }

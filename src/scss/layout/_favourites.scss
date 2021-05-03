@@ -37,13 +37,21 @@
 }
 .js-list-fav {
   padding-bottom: 25px;
+  margin-bottom: 25px;
   width: 150px;
   text-align: center;
+  outline: auto;
+  outline-color: $turquoise;
+  border-color: $turquoise;
+  border: 7px $turquoise;
 }
 .btn-single {
   position: relative;
   right: 37%;
   bottom: -18px;
+}
+.js-hidden {
+  display: none;
 }
 
 .container__section--btn-delete {
