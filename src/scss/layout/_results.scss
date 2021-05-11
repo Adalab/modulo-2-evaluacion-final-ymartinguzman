@@ -51,7 +51,7 @@
 .js-list-item {
   &:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 45px purple;
+    box-shadow: 0 0 45px $purple;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     cursor: pointer;
   }
@@ -59,7 +59,7 @@
 
 .js-title-film {
   color: $white;
-  padding-bottom: 22px;
+  padding: 22px;
 }
 .js-list-image {
   width: 200px;

@@ -47,14 +47,15 @@ function paintFavList() {
   for (let i = 0; i < favouritesList.length; i++) {
     const listName = favouritesList[i].show.name;
     const listImage = favouritesList[i].show.image;
+    const id = favouritesList[i].show.id;
     resultsFav += `<li  class="js-result-fav js-list-fav " id="${i}">`;
-    resultsFav += `<h3> ${listName} </h3>`;
+    resultsFav += `<h3 class="js-title-film"> ${listName} </h3>`;
     if (listImage === null) {
       resultsFav += `<img src = "https://via.placeholder.com/210x295/ffffff/666666/?text=TV." alt = "cover selected serie" width="100">`;
     } else {
       resultsFav += `<img src = ${listImage.medium} alt = "cover selected serie" width="100">`;
     }
-    // resultsFav += `<button class="btn-single-delete">x</button>`;
+    // resultsFav += `<button class="btn-single-delete" id="${id}">x</button>`;
     resultsFav += `</li>`;
   }
 
