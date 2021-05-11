@@ -13,9 +13,10 @@ La aplicación de búsqueda de series consta de dos partes:
 Una vez aparecen los resultados de búsqueda, la usuaria puede indicar cuáles son nuestras series favoritas.
 Para ello, al hacer clic sobre una serie debe pasar lo siguiente:
 
-1. El color de fondo y el de fuente se intercambian, indicando que es una serie favorita
-1. Se puede observar un listado en la parte izquierda de la pantalla, debajo del formulario de búsqueda, con las series favoritas.
-1. Las series favoritas siguen apareciendo a la izquierda aunque la usuaria realice otra búsqueda, puesto que los datos se guardan en localStorage.
+1. Se puede observar un listado en la parte izquierda de la pantalla con las series favoritas y con un botón para borrarlas todas.
+2. Las series favoritas siguen apareciendo a la izquierda aunque la usuaria realice otra búsqueda, puesto que los datos se guardan en localStorage.
+
+![petflix](https://user-images.githubusercontent.com/70536114/116870384-c934c680-ac12-11eb-85d7-3f8feae71d12.JPG)
 
 ## ¿Cómo se arranca este proyecto?
 
